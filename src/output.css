@@ -2648,7 +2648,19 @@ video {
 
   src: url(./assets/fonts/Roboto-Regular.ttf);
 
+  font-weight: normal;
+
+  /* or 400 */
+}
+
+@font-face {
+  font-family: "Roboto";
+
   src: url(./assets/fonts/Roboto-Bold.ttf);
+
+  font-weight: bold;
+
+  /* or 700 for bold font weight */
 }
 
 .form-card-visible {
@@ -2821,10 +2833,6 @@ video {
     margin-bottom: 2rem;
   }
 
-  .md\:grid {
-    display: grid;
-  }
-
   .md\:h-full {
     height: 100%;
   }
@@ -2833,20 +2841,8 @@ video {
     width: auto;
   }
 
-  .md\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .md\:grid-rows-1 {
-    grid-template-rows: repeat(1, minmax(0, 1fr));
-  }
-
   .md\:rounded-lg {
     border-radius: 0.5rem;
-  }
-
-  .md\:p-8 {
-    padding: 2rem;
   }
 
   .md\:pb-0 {
