@@ -9,8 +9,6 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="./src/output.css">
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
-  <script src="main.js" defer></script>
-
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
 </head>
 
@@ -113,5 +111,30 @@
     </p>
   </footer>
 </body>
+<script>
+  const submitBtn = document.querySelector('.submit-btn');
+
+  const emailInput = document.querySelector('input[type="email"]');
+
+  emailInput.addEventListener("input", () => {
+    emailInput.checkValidity() ? submitBtn.classList.add("valid-email") : submitBtn.classList.remove("valid-email");
+  })
+
+
+  const handleSubmit = () => {
+    const form = document.querySelector('form');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      document.querySelector('.form-card').classList.remove('form-card-visible');
+      document.querySelector('.form-card').classList.add('hidden');
+      document.querySelector('.success-card').style.display = 'block';
+    });
+  }
+  document.querySelector(".dismiss-btn").addEventListener('click', () => {
+    document.querySelector('.success-card').style.display = 'none';
+    document.querySelector('.form-card').classList.add('form-card-visible');
+  })
+
+</script>
 
 </html>
