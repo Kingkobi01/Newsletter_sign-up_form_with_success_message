@@ -4,13 +4,13 @@
 
 @font-face {
   font-family: "Roboto";
-  src: url(./assets/fonts/Roboto-Regular.ttf);
+  src: url("../assets/fonts/Roboto-Regular.ttf");
   font-weight: normal; /* or 400 */
 }
 
 @font-face {
   font-family: "Roboto";
-  src: url(./assets/fonts/Roboto-Bold.ttf);
+  src: url("../assets/fonts/Roboto-Bold.ttf");
   font-weight: bold; /* or 700 for bold font weight */
 }
 
