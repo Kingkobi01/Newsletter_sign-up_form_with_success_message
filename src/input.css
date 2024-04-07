@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Roboto";
+  src: url(./assets/fonts/Roboto-Regular.ttf);
+  src: url(./assets/fonts/Roboto-Bold.ttf);
+}
+
+.form-card-visible {
+  @apply text-sm bg-white flex gap-8 flex-col-reverse md:grid md:grid-rows-1 md:grid-cols-2 md:p-8 rounded-b-lg md:rounded-lg text-neutral-300
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* .form-img {
+  background-image: url(../assets/images/illustration-sign-up-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200px;
+  width: 100%;
+} */
+
+.valid-email {
+  background-image: linear-gradient(45deg, #ff3e83 30%, #f99047);
+}
