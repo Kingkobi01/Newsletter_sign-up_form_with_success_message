@@ -13,24 +13,24 @@
 </head>
 
 <body
-      class="font-roboto relative bg-neutral-300 text-white max-w-[100vw] min-h-[100vh] overflow-hidden flex items-center justify-center">
-  <main class="w-[96%] max-w-[1240px] mx-auto outline-1 outline-black grid place-items-center">
+      class="relative flex justify-center items-center bg-neutral-300 max-w-[100vw] min-h-[100vh] font-roboto text-white overflow-hidden">
+  <main class="place-items-center grid mx-auto w-[96%] max-w-[1240px] outline-1 outline-black">
     <div
-         class=" form-card | form-card-visible">
-      <div class=" px-4 pb-8 md:pb-0 flex flex-col gap-8 items-stretch row-start-2 md:row-start-1">
-        <h1 class="text-3xl text-neutral-300 font-bold">Stay updated!</h1>
-        <p class="text-neutral-300 w-[40ch]">Join 60,000+ product managers receiving monthly updates on:</p>
+         class="form-card form-card-visible |">
+      <div class="flex flex-col items-stretch gap-8 row-start-2 md:row-start-1 px-4 pb-8 md:pb-0">
+        <h1 class="font-bold text-3xl text-neutral-300">Stay updated!</h1>
+        <p class="w-[40ch] text-neutral-300">Join 60,000+ product managers receiving monthly updates on:</p>
         <ul role="list"
-            class=" self-start space-y-2 w-[36ch] md:w-auto">
-          <li class="text-neutral-200 flex gap-4 items-center">
+            class="space-y-2 w-[36ch] md:w-auto self-start">
+          <li class="flex items-center gap-4 text-neutral-200">
             <img src="./assets/images/icon-list.svg" alt="">
             <p class="">Product discovery and building what matters</p>
           </li>
-          <li class="text-neutral-200 flex gap-4 items-center">
+          <li class="flex items-center gap-4 text-neutral-200">
             <img src="./assets/images/icon-list.svg" alt="">
             <p class="">Measuring to ensure updates are a success</p>
           </li>
-          <li class="text-neutral-200 flex gap-4 items-center">
+          <li class="flex items-center gap-4 text-neutral-200">
             <img src="./assets/images/icon-list.svg" alt="">
             <p class="">And much more!</p>
           </li>
@@ -39,101 +39,50 @@
           <form class="space-y-6 text-xs">
             <div class="flex flex-col gap-4">
               <label class="block relative">
-                <span class="block text-xs font-bold text-slate-700">Email</span>
+                <span class="block font-bold text-slate-700 text-xs">Email</span>
                 <input type="email" required
-                       class="peer mt-1 py-3 border w-full ps-3 rounded-md 
-                           invalid:border-tomato invalid:bg-tomato/30 invalid:text-tomato
-                           valid:border-green-500 valid:bg-green-500/30 valid:text-green-500"
+                       class="valid:border-green-500 invalid:bg-tomato/30 valid:bg-green-500/30 mt-1 py-3 border invalid:border-tomato rounded-md w-full invalid:text-tomato valid:text-green-500 peer ps-3"
                        placeholder="example@company.com" />
                 <p
-                   class="mt-2 invisible peer-invalid:visible text-tomato text-sx font-bold absolute -top-[10%] right-0">
+                   class="absolute mt-2 invisible peer-invalid:visible -top-[10%] right-0 font-bold text-sx text-tomato">
                   Valid email required.
                 </p>
               </label>
             </div>
             <input type="submit"
                    value="Subscribe to monthly newsletter"
-                   class="submit-btn w-full py-4 rounded-md font-semibold text-white bg-neutral-300 hover:bg-neutral-200 duration-200
-                    " />
+                   onclick="handleSubmit()"
+                   class="bg-neutral-300 hover:bg-neutral-200 py-4 rounded-md w-full font-semibold text-white duration-200 submit-btn" />
           </form>
 
         </div>
       </div>
       <div
-           class="form-img w-full h-[200px] md:h-full bg-cover bg-center rounded-b-lg md:rounded-lg outline-[1px] outline-neutral-200 bg-tomato  bg-[url('/assets/images/illustration-sign-up-mobile.svg')]">
+           class="bg-[url('/assets/images/illustration-sign-up-mobile.svg')] bg-tomato bg-cover bg-center form-img rounded-b-lg md:rounded-lg w-full h-[200px] md:h-full outline-[1px] outline-neutral-200">
       </div>
     </div>
-    <div class="success-card | rounded-lg bg-white text-neutral-300 h-full p-8" style="display: none;">
-      <div class="my-[8rem] md:my-8 flex flex-col items-start gap-8">
+    <div class="bg-white p-8 rounded-lg h-full text-neutral-300 | success-card" style="display: none;">
+      <div class="flex flex-col items-start gap-8 my-[8rem] md:my-8">
         <img src="./assets/images/icon-success.svg" alt="">
         <h1 class="font-bold text-3xl">Thanks for subscribing!</h1>
-        <p class="text-sm w-[40ch]">A confirmation email has been sent to <span
+        <p class="w-[40ch] text-sm">A confirmation email has been sent to <span
                 class="font-bold">ash@loremcompany.com</span>.
           Please open it and click the button inside to confirm your subscription.</p>
       </div>
       <button
-              class="dismiss-btn w-full py-4 rounded-md font-semibold text-white bg-neutral-300 hover:bg-gradient-to-tr hover:from-[#ff3e83] hover:to-[#f99047] duration-200">Dismiss
+              class="bg-neutral-300 hover:bg-gradient-to-tr hover:from-[#ff3e83] hover:to-[#f99047] py-4 rounded-md w-full font-semibold text-white duration-200 dismiss-btn">Dismiss
         message</button>
     </div>
   </main>
 
-  <!-- Sign-up form start -->
-
-
-
-
-
-
-
-
-
-
-
-
-  <!-- Sign-up form end -->
-
-  <!-- Success message start -->
-
-  <!-- 
-
-  
-
-   -->
-
-  <!-- Success message end -->
-
   <footer>
-    <p class="attribution absolute bottom-0 left-0 right-0 w-full text-center">
+    <p class="right-0 bottom-0 left-0 absolute w-full text-center attribution">
       Challenge by <a class="text-tomato" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend
         Mentor</a>.
       Coded by <a class="text-tomato" target="_blank" href="https://github.com/Kingkobi01">Kwabena Boakye</a>.
     </p>
   </footer>
 </body>
-<script>
-  const submitBtn = document.querySelector('.submit-btn');
-
-  const emailInput = document.querySelector('input[type="email"]');
-
-  emailInput.addEventListener("input", () => {
-    emailInput.checkValidity() ? submitBtn.classList.add("valid-email") : submitBtn.classList.remove("valid-email");
-  })
-
-
-  const handleSubmit = () => {
-    const form = document.querySelector('form');
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      document.querySelector('.form-card').classList.remove('form-card-visible');
-      document.querySelector('.form-card').classList.add('hidden');
-      document.querySelector('.success-card').style.display = 'block';
-    });
-  }
-  document.querySelector(".dismiss-btn").addEventListener('click', () => {
-    document.querySelector('.success-card').style.display = 'none';
-    document.querySelector('.form-card').classList.add('form-card-visible');
-  })
-
-</script>
+<script type="module" src="./js/main.js"></script>
 
 </html>
